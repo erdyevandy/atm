@@ -10,7 +10,7 @@ public class FundTransferDestinationScreen implements CommonScreenIntf {
     Scanner           in                = new Scanner(System.in);
     TransactionScreen transactionScreen = new TransactionScreen();
     ValidationService validationService = new ValidationService();
-    Double            amount;
+    Double            amount            = 0.0;
     boolean           valid             = false;
 
     @Override public void show() {
@@ -32,6 +32,7 @@ public class FundTransferDestinationScreen implements CommonScreenIntf {
         }
         String refNumber = ATMConstant.generateRandomNumber();
         System.out.println("Reference Number: " + refNumber + "\npress enter to continue");
+
         List<String> errors = validationService.validateFundTransfer(destinationAccount, amount, refNumber);
         if (errors.isEmpty()) {
             FundTransferConfirmationScreen fundTransferConfirmationScreen = new FundTransferConfirmationScreen(

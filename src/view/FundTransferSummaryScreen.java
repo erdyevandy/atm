@@ -5,10 +5,11 @@ import util.ATMConstant;
 import java.util.Scanner;
 
 public class FundTransferSummaryScreen implements CommonScreenIntf {
-    Scanner in = new Scanner(System.in);
-    String  destinationAccount;
-    double  transferAmount;
-    String  refNumber;
+    Scanner       in            = new Scanner(System.in);
+    String        destinationAccount;
+    double        transferAmount;
+    String        refNumber;
+    WelcomeScreen welcomeScreen = new WelcomeScreen();
 
     public FundTransferSummaryScreen(String destinationAccount, double transferAmount, String refNumber) {
         this.destinationAccount = destinationAccount;
@@ -30,10 +31,10 @@ public class FundTransferSummaryScreen implements CommonScreenIntf {
             transactionScreen.show();
             break;
         case "2":
-            WelcomeScreen welcomeScreen = new WelcomeScreen();
             welcomeScreen.show();
             break;
         default:
+            welcomeScreen.show();
         }
     }
 }

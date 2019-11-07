@@ -17,10 +17,6 @@ public class SummaryScreen implements CommonScreenIntf {
         this.amount = amount;
     }
 
-    public SummaryScreen() {
-
-    }
-
     @Override public void show() {
         Date today = new Date();
         LocalDateTime localDateTime = LocalDateTime.ofInstant(today.toInstant(), ZoneId.systemDefault());

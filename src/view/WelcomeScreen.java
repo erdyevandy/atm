@@ -34,8 +34,7 @@ public class WelcomeScreen implements CommonScreenIntf {
         } else if (accountLogin == null) {
             System.out.println("Invalid Account Number/PIN");
         }
-//        ATMConstant.loginAccount = accountLogin;
-//        withdrawScreen.show();
+
     }
 
 }

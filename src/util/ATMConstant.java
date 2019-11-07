@@ -29,7 +29,7 @@ public class ATMConstant {
         Account account2 = new Account();
         account2.setName("Erdy");
         account2.setPin("111111");
-        account2.setBalance(30);
+        account2.setBalance(300);
         account2.setAccountNumber("000000");
         accounts.add(account2);
 
